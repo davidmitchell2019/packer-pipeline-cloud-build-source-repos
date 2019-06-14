@@ -29,7 +29,19 @@ Grant access to your project
  gcloud projects add-iam-policy-binding $GOOGLE_CLOUD_PROJECT \
     --member $CLOUD_BUILD_SA \
     --role roles/editor
-    
+
+
+Set up Cloud Build Triggers
+
+You now need to configure Cloud Build to automatically trigger builds every time your repository is pushed to.
+
+    Click on the Build Triggers page under Cloud Build menu in the Google Cloud Console
+    Click "Create Trigger"
+    Select "Cloud Source Repository" and click "Continue"
+    Select "packer-image-build" and click "Continue"
+    Set the build configuration to "cloudbuild.yaml"
+    Click "Create trigger"
+
  
  Push the two files to the REPO
  
